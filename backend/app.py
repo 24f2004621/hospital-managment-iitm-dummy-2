@@ -8,7 +8,7 @@ CORS(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 from models import db
 db.init_app(app)
-# why this isn't working 
+
 # connecting to routes
 from routes import api
 api.init_app(app)
