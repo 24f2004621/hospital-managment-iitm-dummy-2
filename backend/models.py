@@ -1,6 +1,7 @@
 from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
+print("hello")
 
 class Pizza(db.Model):
     id = db.Column(db.Integer, primary_key=True)

@@ -20,7 +20,6 @@ class PizzaAPI(Resource):
                 return {'message': 'Pizza not found!'}, 404
             return {'id': pizza.id, 'name': pizza.name, 'toppings': pizza.toppings}, 200
         pizzas = Pizza.query.all()
-        print("hello")
         
         pizzas = [{'id': p.id, 'name': p.name, 'toppings': p.toppings} for p in pizzas]
         return {'message': 'Pizzas fetched successfully!', "pizzas": pizzas}, 200
